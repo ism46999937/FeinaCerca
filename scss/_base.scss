@@ -1,0 +1,20 @@
+@use "tokens" as *;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: $paper;
+  color: $ink;
+  font: 15px/1.55 $font;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: $pink-soft; color: $ink; }
+button, input, select { font: inherit; }
+button, a, select, input { -webkit-tap-highlight-color: transparent; }
+button { color: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid $pink-soft; outline-offset: 3px; }
+.wrap { width: min(1220px, 100% - 56px); margin: 0 auto; }
+
+

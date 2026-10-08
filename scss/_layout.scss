@@ -1,0 +1,55 @@
+@use "tokens" as *;
+
+header {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $line;
+}
+.brand { font-size: 23px; font-weight: 850; letter-spacing: -1.2px; }
+.brand i { color: $purple; font-style: normal; }
+.nav { display: flex; gap: 30px; color: $muted; font-size: 14px; }
+.nav a { text-decoration: none; transition: color .18s ease; &:hover { color: $purple; } }
+.nav a[hidden] { display: none; }
+.profile {
+  padding: 9px 15px;
+  border: 1px solid $line;
+  border-radius: 999px;
+  background: $white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color .18s ease, transform .18s ease;
+  &:hover { border-color: $purple; transform: translateY(-1px); }
+}
+.hero {
+  padding: 62px 0 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 28px;
+}
+.eyebrow { color: $purple; font-size: 11px; font-weight: 850; letter-spacing: 1.7px; text-transform: uppercase; }
+.hero h1 { margin: 13px 0 0; font-size: clamp(42px, 6vw, 68px); line-height: .99; letter-spacing: -3.8px; }
+.hero p { margin: 18px 0 0; color: $muted; font-size: 17px; }
+.searchbox {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 1fr auto;
+  gap: 8px;
+  padding: 11px;
+  border: 1px solid rgba(227, 233, 225, .9);
+  border-radius: 21px;
+  background: $white;
+  box-shadow: $shadow;
+}
+.field { min-width: 0; padding: 7px 14px; border-right: 1px solid $line; }
+.field label { display: block; margin-bottom: 3px; color: $muted; font-size: 10px; font-weight: 850; letter-spacing: .7px; text-transform: uppercase; }
+.field input, .field select { width: 100%; border: 0; outline: 0; background: transparent; color: $ink; font-size: 14px; }
+.content { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 34px; padding: 40px 0 74px; }
+.results-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 20px; }
+.results-head h2 { margin: 0; font-size: 23px; letter-spacing: -.7px; }
+.results-head p { margin: 4px 0 0; color: $muted; font-size: 13px; }
+footer { padding: 23px 0; border-top: 1px solid $line; color: $muted; font-size: 12px; }
+footer a { color: $purple; text-decoration: none; &:hover { text-decoration: underline; } }
+
+
